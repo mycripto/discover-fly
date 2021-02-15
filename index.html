@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a class="active" href="#">Booking</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+        <div class="booking-form booking-toggle">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhaka, BG">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, USA">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input id="depart-date" class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input id="return-date" class="inp-style" type="date"  name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" min="0" type="number" name="" id="input-first" placeholder="Please enter number of seat">
+                </div>
+                <div class="plus-minus-btn">
+                    <button  class = "btn-style" id="btnPlusFirstCls">+</button>
+                    <button class = "btn-style" id="btnMinusFirstcls">-</button>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input class="inp-style inp-width" min="0" type="number" name="" id="input-economy" placeholder="Please enter number of seat">
+                </div>
+                <div class="plus-minus-btn">
+                    <button  class = "btn-style" id="btnPlusEconomy">+</button>
+                    <button class = "btn-style" id="btnMinusEconomy">-</button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p >$ <span id="subtotal">500</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p >$ <span id="vat">50</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p >$ <span id="total">550</span> </p>
+                    </div>
+                </div>
+            </div>
+            <button id="btnBook" class="btn-style btn-book">Book Now</button>
+        </div>
+
+        <!-- Summary  -->
+        <div class="grid-container ">
+            <div class="itinerary">
+              <div class="title">
+                <h2 style="text-align: center; ">Booking Summary</h2>
+              </div>
+              <div class="departure">
+              <h2>Departure</h2>
+              <br>
+              <h3>Flying from: <span class="" id="depart_flfrom">Dhaka</span> </h3>
+              <h3>Flying to: <span class="" id="depart_flTo">NY</span> </h3>
+              <h3>Date: <span id="departDateSummary">00/00/0000</span> </h3>
+              <h3>Time: <span id="">08:30pm</span> </h3>
+
+              </div>
+              <div class="return">
+              <h2>Return</h2>
+              <br>
+              <h3>Flying from: <span class="" id="return_flfrom">Dhaka</span> </h3>
+              <h3>Flying to: <span class="" id="return_flTo">NY</span> </h3>
+              <h3>Date: <span id="returnDateSammary">27 April 2021</span> </h3>
+              <h3>Time: <span id="">10:45am</span> </h3>
+
+              </div>
+            </div>
+            <div class="fareDetails">
+              <div class="title">
+                <h2 >Fare Details</h2>
+              </div>
+              <div class="firstClass">
+                <h2>First Class</h2>
+                <br>
+                <h3>Traveller: <span id="fClsNum">0</span></h3>
+                <h3>Price: $<span id="fClsPrice">0</span></h3>
+              </div>
+              <div class="economyClass">
+                <h2>Economy Class</h2>
+                <br>
+                <h3>Traveller: <span id="eClsNum">0</span></h3>
+                <h3>Price: $<span id="eClsPrice">0</span></h3>
+              </div>
+            </div>
+            <div class="fareSammary">
+              <h1 style="margin-bottom: 1.5rem;">Price </h1>
+              <h3>Subtotal: $<span id="summarySub">0</span></h3>
+              <h3>Vat: $<span id="summaryVat">0</span></h3>
+              <h2>Total: $<span id="summaryTotal">0</span></h2>
+              <br><br>          
+              <button id="btnConfirm" class="btn-style btn-book">CONFIRM</button>
+            </div>
+
+          </div>
+        <!-- Summary end -->
+
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+    </section>
+
+    <!--Thank You-->
+    <script src="app.js"></script>
+</body>
+
+</html>

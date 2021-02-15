@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: url("images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  padding: 20px 0;
+}
+.container {
+  width: 1200px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 6px;
+}
+nav ul li a {
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+}
+nav ul li a:hover,
+a.active {
+  background-color: #3352f2;
+  border-radius: 5px;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 70px;
+  align-items: center;
+}
+.booking-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 5px;
+  float: left;
+  width: 30rem;
+  height: 45rem;
+}
+.booking-form h3 {
+  margin: 10px 0px;
+}
+.booking-form .input-group {
+  margin: 10px 0;
+}
+.f-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inp-width {
+  min-width: 300px;
+}
+
+.booking-form .calculations {
+  margin: 10px 0;
+}
+.booking-form .calculations p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.booking-form input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #f3f5ff;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+.booking-form .inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.booking-content {
+  color: #fff;
+  width: 80%;
+}
+.booking-content h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.plus-minus-btn {
+  color: #3352f2;
+  font-size: 40px;
+  padding: 2px;
+  margin: 10px 25px 0 0;
+  word-spacing: 20px;
+  display: flex;
+  align-items: center;
+}
+.btn-style {
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: #3352f2;
+  margin: 0 3px;
+}
+.btn-book {
+  width: 100%;
+  height: 35px;
+  /* margin-top: -1rem; */
+}
+#btnBook {
+  margin-top: 5rem;
+}
+#btnConfirm {
+  background-color: rgb(17, 163, 90);
+}
+.amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-toggle {
+  display: none;
+}
+.booking-toggle {
+  display: block;
+}
+/* Summary style  */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 0px;
+  grid-template-areas:
+    "itinerary itinerary"
+    "fareDetails fareDetails"
+    "fareSammary fareSammary";
+  background-color: rgb(235, 231, 225);
+  width: 30rem;
+  height: 45rem;
+  /* margin: 3rem auto; */
+  padding: 15px;
+  border-radius: 5px;
+  line-height: 25px;
+  border: 1px solid #ddd;
+}
+
+.itinerary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4rem 1fr;
+  gap: 0px 20px;
+  grid-template-areas:
+    "title title"
+    "departure return";
+  grid-area: itinerary;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+}
+
+.departure {
+  grid-area: departure;
+}
+
+.return {
+  grid-area: return;
+}
+
+.fareDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4rem 1fr;
+  gap: 0px 20px;
+  grid-template-areas:
+    "title title"
+    "firstClass economyClass";
+  grid-area: fareDetails;
+  margin-top: 3rem;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid lightgray;
+}
+
+.firstClass {
+  grid-area: firstClass;
+}
+
+.economyClass {
+  grid-area: economyClass;
+}
+
+.fareSammary {
+  grid-area: fareSammary;
+  margin-top: 3rem;
+}
+.title {
+  grid-area: title;
+}
+
+.grid-container h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.grid-container span {
+  font-weight: 400;
+  color: rgb(39, 38, 38);
+}
